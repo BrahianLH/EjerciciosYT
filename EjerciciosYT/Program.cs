@@ -9,7 +9,7 @@ namespace Ejercicios
         static void Main(string[] args)
         {
             Ejercicios obj = new Ejercicios();
-            obj.Ejercicio7();
+            obj.Ejercicio10();
 
         }
 
@@ -116,22 +116,60 @@ namespace Ejercicios
 
         }
 
+        // Pedir el sueldo de un empleado y el total de sus ventas en el mes para calcular su sueldo total con una comisión del 10%
         public void Ejercicio8()
         {
+            Console.WriteLine("Ingrese el total de su sueldo: ");
+            double sueldo = Convert.ToDouble(Console.ReadLine());
 
+            Console.WriteLine("Ingrese el total de sus ventas: ");
+            double ventas = Convert.ToDouble(Console.ReadLine());
 
+            double comision = ventas * 0.10;
+            double sueldototal = sueldo + comision;
+
+            Console.WriteLine("Su sueldo total es: " + sueldototal);
+            Console.ReadKey();
         }
 
+
+        // Pedir el precio de una compra y aplicar un descuento del 15% para calcular el total a pagar
         public void Ejercicio9()
         {
 
+            Console.WriteLine("Ingrese el precio de la compra: ");
+            double total = Convert.ToDouble(Console.ReadLine());
 
+            double descuento = total * 0.15;
+            double totalapagar = total - descuento;
+
+            Console.WriteLine("El total de su compra con el descuento es de: " + totalapagar);
+            Console.ReadKey();
         }
 
+
+        // Pedir las notas de tres parciales, el examen final y un trabajo final para calcular la nota final de un
+        // estudiante con los siguientes porcentajes: 55% parciales, 30% examen final y 15% trabajo final
         public void Ejercicio10()
         {
+            Console.WriteLine("Ingrese la primer nota del parcial: ");
+            double p1 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Ingrese la segunda nota del parcial: ");
+            double p2 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Ingrese la tercer nota del parcial: ");
+            double p3 = Convert.ToDouble(Console.ReadLine());
 
+            double promedio = (p1 + p2 + p3) / 3;
 
+            Console.WriteLine("Ingrese la nota del examen final: ");
+            double efinal = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Ingrese la nota del trabajo final: ");
+            double trabajo = Convert.ToDouble(Console.ReadLine());
+
+            double notafinal = ((promedio * 0.55) + (efinal * 0.30) + (trabajo * 0.15));
+            Console.WriteLine("La nota final del estudiante es: " + notafinal);
+            Console.ReadKey();
         }
     }
 }
